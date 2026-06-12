@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닥터빌 - NSAIDs 처방 시 소화성궤양 예방 요법 설문조사</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body {
+            font-family: 'Pretendard', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .faq-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-blue-600 font-bold text-xl">
+                <span>DoctorVille</span>
+            </div>
+            <a href="#survey-cta" class="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full hover:bg-blue-100 transition">
+                10만 포인트 받기
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-blue-50 to-white py-8 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold mb-3">
+                의사 전용 플랫폼 닥터빌
+            </span>
+            <h1 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+                NSAIDs 처방 시 소화성궤양 예방 요법 의사 설문조사
+            </h1>
+            <p class="text-lg md:text-xl text-blue-600 font-semibold mb-3">
+                임상 현장의 실제 처방 경험과 의견을 들려주세요.
+            </p>
+            <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                고령화와 만성 통증 환자의 증가로 NSAIDs 처방 시 위장관 보호의 중요성이 커지고 있습니다. 본 설문은 현장의 인식과 약제 선택 기준을 확인하여 향후 의료 환경 개선을 위한 기초 자료로 활용됩니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Webtoon Section -->
+    <section class="py-6 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-100 rounded-xl overflow-hidden shadow-md border border-gray-200">
+                <img src="시장조사웹툰.png" alt="NSAIDs 처방 설문조사 안내 웹툰" class="w-full h-auto object-cover" onerror="this.src='https://via.placeholder.com/1200x800?text=Webtoon+Image+Not+Found'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Info & Process Section -->
+    <section class="py-8 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <!-- Info Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <i data-lucide="users" class="w-5 h-5 text-blue-600 mb-1"></i>
+                    <h3 class="text-xs text-gray-500 font-semibold">참여 대상</h3>
+                    <p class="font-bold text-gray-900 text-sm mt-1">전공의 선생님</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <i data-lucide="target" class="w-5 h-5 text-blue-600 mb-1"></i>
+                    <h3 class="text-xs text-gray-500 font-semibold">목표 인원</h3>
+                    <p class="font-bold text-gray-900 text-sm mt-1">1,000명 <span class="text-red-500 text-xs">(선착순)</span></p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <i data-lucide="calendar" class="w-5 h-5 text-blue-600 mb-1"></i>
+                    <h3 class="text-xs text-gray-500 font-semibold">조사 기간</h3>
+                    <p class="font-bold text-gray-900 text-xs mt-1">26.06.15 ~ 08.15</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm flex flex-col items-center text-center">
+                    <i data-lucide="clock" class="w-5 h-5 text-blue-600 mb-1"></i>
+                    <h3 class="text-xs text-gray-500 font-semibold">소요 시간</h3>
+                    <p class="font-bold text-gray-900 text-sm mt-1">약 30~40분</p>
+                </div>
+            </div>
+
+            <!-- Reward -->
+            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                <div class="flex items-center gap-3">
+                    <div class="bg-yellow-100 p-2 rounded-full text-yellow-600"><i data-lucide="coins" class="w-6 h-6"></i></div>
+                    <div>
+                        <h3 class="text-sm text-gray-600 font-semibold">설문 완료 답례품</h3>
+                        <p class="text-xl font-bold text-blue-700">닥터빌 포인트 100,000P</p>
+                    </div>
+                </div>
+                <div class="text-sm text-gray-600 text-left md:text-right">
+                    <p>✓ 완료 후 14일 이내 지급 (성실 응답자 대상)</p>
+                    <p>✓ 플랫폼내 상품 이용(유료클래스, 포인트샵 등)</p>
+                </div>
+            </div>
+
+            <!-- Steps (Horizontal) -->
+            <h3 class="text-base font-bold text-gray-900 mb-3 text-center md:text-left">설문 참여 방법</h3>
+            <div class="flex flex-col md:flex-row gap-2">
+                <div class="flex-1 bg-white p-3 rounded-lg border border-gray-200 text-center"><span class="text-blue-600 font-bold block text-sm">STEP 1</span><span class="text-xs text-gray-700">닥터빌 회원가입<br>(면허번호 인증)</span></div>
+                <div class="hidden md:flex items-center text-gray-300"><i data-lucide="chevron-right"></i></div>
+                <div class="flex-1 bg-white p-3 rounded-lg border border-gray-200 text-center"><span class="text-blue-600 font-bold block text-sm">STEP 2</span><span class="text-xs text-gray-700">닥터빌 아이디 확인<br>(이메일 형식)</span></div>
+                <div class="hidden md:flex items-center text-gray-300"><i data-lucide="chevron-right"></i></div>
+                <div class="flex-1 bg-white p-3 rounded-lg border border-gray-200 text-center"><span class="text-blue-600 font-bold block text-sm">STEP 3</span><span class="text-xs text-gray-700">설문 참여<br>버튼 클릭</span></div>
+                <div class="hidden md:flex items-center text-gray-300"><i data-lucide="chevron-right"></i></div>
+                <div class="flex-1 bg-white p-3 rounded-lg border border-gray-200 text-center"><span class="text-blue-600 font-bold block text-sm">STEP 4</span><span class="text-xs text-gray-700">설문 시작 시<br>아이디 입력</span></div>
+                <div class="hidden md:flex items-center text-gray-300"><i data-lucide="chevron-right"></i></div>
+                <div class="flex-1 bg-orange-50 p-3 rounded-lg border border-orange-200 text-center"><span class="text-orange-500 font-bold block text-sm">STEP 5</span><span class="text-xs font-bold text-orange-800">설문 완료 및<br>포인트 지급</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notices & FAQ Section (Combined into 2 columns) -->
+    <section class="py-8 px-4 bg-white">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Notices -->
+            <div>
+                <h2 class="text-lg font-bold text-gray-900 mb-4 border-b pb-2">유의사항 및 개인정보 안내</h2>
+                <div class="space-y-4 text-sm text-gray-600">
+                    <div>
+                        <h4 class="font-bold text-gray-800 flex items-center gap-1 mb-1"><i data-lucide="info" class="w-4 h-4 text-blue-500"></i> 참여 전 확인사항</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>닥터빌 회원만 참여 가능 (비회원은 가입 후 참여)</li>
+                            <li>설문 시작 시 닥터빌 아이디를 정확히 입력해야 합니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 flex items-center gap-1 mb-1"><i data-lucide="alert-triangle" class="w-4 h-4 text-red-500"></i> 지급 제외 기준</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>아이디 미기재/오기재, 중복 참여, 불성실 응답 등</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 flex items-center gap-1 mb-1"><i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> 개인정보 안내</h4>
+                        <p class="pl-5 text-xs">답례품 지급을 위해 아이디를 수집하며, 목적 달성 후 안전하게 파기됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div>
+                <h2 class="text-lg font-bold text-gray-900 mb-4 border-b pb-2">자주 묻는 질문(FAQ)</h2>
+                <div class="space-y-2">
+                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full px-4 py-3 text-left flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition text-sm" onclick="toggleFaq(this)">
+                            <span class="font-bold text-gray-800">Q. 비회원도 참여 가능한가요?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-4 h-4 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-4 bg-white text-gray-600 text-xs sm:text-sm">
+                            A. 참여 전 닥터빌 회원가입(면허번호 인증)이 필요합니다.
+                        </div>
+                    </div>
+                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full px-4 py-3 text-left flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition text-sm" onclick="toggleFaq(this)">
+                            <span class="font-bold text-gray-800">Q. 답례품은 언제 지급되나요?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-4 h-4 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-4 bg-white text-gray-600 text-xs sm:text-sm">
+                            A. 정상적으로 설문 완료 후 14일 이내 지급됩니다. (포인트 관리 메뉴 확인)
+                        </div>
+                    </div>
+                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="w-full px-4 py-3 text-left flex justify-between items-center focus:outline-none bg-gray-50 hover:bg-gray-100 transition text-sm" onclick="toggleFaq(this)">
+                            <span class="font-bold text-gray-800">Q. 중간에 종료하면 어떻게 되나요?</span>
+                            <i data-lucide="chevron-down" class="chevron-icon w-4 h-4 text-gray-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer px-4 bg-white text-gray-600 text-xs sm:text-sm">
+                            A. 설문을 끝까지 정상적으로 완료한 경우에만 지급됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section id="survey-cta" class="py-10 px-4 bg-gray-900 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl font-bold mb-2">지금 바로 설문에 참여해주세요!</h2>
+            <p class="text-gray-400 mb-6 text-sm">선착순 1,000명 마감 시 조기 종료될 수 있습니다.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+                <a href="https://www.doctorville.co.kr/intro?logout=true" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition w-full sm:w-auto text-base border border-gray-600 flex justify-center items-center gap-2">
+                    <i data-lucide="user-plus" class="w-5 h-5"></i>
+                    지금 닥터빌 회원가입하기
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJ61LHLjotTOLyQbcVdD8hbyPzFrc7JaEx-mEpYb3u9dDQfA/viewform?usp=header" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition transform hover:-translate-y-1 w-full sm:w-auto text-base flex items-center justify-center gap-2">
+                    <i data-lucide="clipboard-edit" class="w-5 h-5"></i>
+                    설문 참여하고 100,000P 받기
+                </a>
+            </div>
+            
+            <div class="mt-6 text-gray-500 text-xs sm:text-sm">
+                <p>문의: support@drville.com | 02-1234-5678 (평일 09:00 ~ 18:00)</p>
+                <p class="mt-1">&copy; 2026 Dr.Ville. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom Bar for Mobile -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden z-50 flex gap-2">
+        <a href="https://mims-account.mcircle.co.kr/regist?ref=medistaff" target="_blank" class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 rounded-lg border border-gray-300 transition text-sm flex items-center justify-center">
+            회원가입
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJ61LHLjotTOLyQbcVdD8hbyPzFrc7JaEx-mEpYb3u9dDQfA/viewform?usp=header" target="_blank" class="flex-[2] bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow transition text-sm flex items-center justify-center gap-1">
+            <i data-lucide="clipboard-edit" class="w-4 h-4"></i>
+            설문 참여하고 10만P 받기
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // FAQ Toggle logic
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(faqItem => {
+                if (faqItem !== item) {
+                    faqItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
